@@ -11,8 +11,12 @@
     <div class="bg-white rounded-3xl shadow-2xl p-10 max-w-2xl w-full">
         <!-- Header -->
         <div class="text-center mb-8">
-            <h1 class="text-4xl font-bold text-gray-800 mb-3">Alloy Application</h1>
-            <p class="text-gray-600 text-lg">Evaluation form</p>
+            <h1 class="text-3xl font-bold text-gray-800 mb-2">Alloy Application Form</h1>
+            <p class="text-gray-600">Please fill out all required fields to submit your application</p>
+            <button type="button" onclick="fillTestData()" 
+                    class="mt-3 px-4 py-2 bg-gray-200 text-gray-700 text-sm rounded-lg hover:bg-gray-300 transition duration-200">
+                Fill Test Data
+            </button>
         </div>
 
         <!-- Result Display -->
@@ -117,6 +121,20 @@
     </div>
 
     <script>
+        // Fill form with test data
+        function fillTestData() {
+            document.getElementById('name_first').value = 'Shivam';
+            document.getElementById('name_last').value = 'Approved';
+            document.getElementById('birth_date').value = '1990-05-15';
+            document.getElementById('document_ssn').value = '123456789';
+            document.getElementById('email_address').value = 'shivam@test.com';
+            document.getElementById('address_line_1').value = '123 Main St';
+            document.getElementById('address_city').value = 'San Jose';
+            document.getElementById('address_state').value = 'CA';
+            document.getElementById('address_postal_code').value = '95122';
+            document.getElementById('address_country_code').value = 'US';
+        }
+
         // Form submission handling
         document.getElementById('applicationForm').addEventListener('submit', function(e) {
             const submitBtn = this.querySelector('button[type="submit"]');
