@@ -26,11 +26,11 @@ if not WORKFLOW_TOKEN or not WORKFLOW_SECRET:
 
 # --- Applicant Data ---
 applicant_data = {
-    "name_first": "Jessica",
-    "name_last": "Review",  # Change to "Deny" or any other name to test
+    "name_first": "Shivam",
+    "name_last": "Approved",  # Change to "Deny" or any other name to test
     "birth_date": "1990-05-15",
     "document_ssn": "123456789",
-    "email_address": "jessica.review@example.com",
+    "email_address": "shivam@test.com",
     "address_line_1": "123 Main St",
     "address_city": "San Jose",
     "address_state": "CA",
