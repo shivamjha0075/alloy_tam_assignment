@@ -51,13 +51,13 @@ if response.status_code == 201:
     outcome = data.get("summary", {}).get("outcome", "")
 
     if outcome == "Approved":
-        print("✅ Congratulations! You are approved.")
+        print("Congratulations! You are approved.")
         print("Raw Response:", response.status_code, response.text)
     elif outcome == "Manual Review":
-        print("🕐 Your application is under review. Please wait for further updates.")
+        print("Your application is under review. Please wait for further updates.")
         print("Raw Response:", response.status_code, response.text)
     elif outcome == "Denied":
-        print("❌ Unfortunately, we cannot approve your application at this time.")
+        print("Unfortunately, we cannot approve your application at this time.")
         print("Raw Response:", response.status_code, response.text)
     else:
         print("⚠️ Unexpected outcome:", outcome)

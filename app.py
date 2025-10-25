@@ -61,26 +61,26 @@ def process_response(result):
     if outcome == "Approved":
         return {
             "class": "approved",
-            "title": "✅ Congratulations!",
-            "message": "Your application has been approved. Welcome aboard!"
+            "title": "Congratulations!",
+            "message": "Congratulations! You are approved."
         }
     elif outcome == "Manual Review":
         return {
             "class": "review",
-            "title": "🕐 Under Review",
-            "message": "Your application is under manual review. We'll contact you within 2-3 business days."
+            "title": "Under Review",
+            "message": "Your application is under review. Please wait for further updates."
         }
     elif outcome == "Denied":
         return {
             "class": "denied",
-            "title": "❌ Application Denied",
-            "message": "Unfortunately, we cannot approve your application at this time. You may reapply after 30 days."
+            "title": "Application Denied",
+            "message": "Unfortunately, we cannot approve your application at this time."
         }
     else:
         return {
             "class": "review",
             "title": "⚠️ Unexpected Response",
-            "message": f"Received unexpected outcome: {outcome}. Please contact support."
+            "message": f"Received unexpected outcome: {outcome}."
         }
 
 
